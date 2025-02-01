@@ -1,6 +1,14 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Home, MessageSquare, Bookmark, HelpCircle, User, Settings, LogOut } from 'lucide-react';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import {
+  Home,
+  MessageSquare,
+  Bookmark,
+  HelpCircle,
+  User,
+  Settings,
+  LogOut,
+} from "lucide-react";
 
 function Sidebar() {
   return (
@@ -18,7 +26,9 @@ function Sidebar() {
             to="/"
             className={({ isActive }) =>
               `flex items-center gap-2 p-2 rounded-lg ${
-                isActive ? 'bg-red-50 text-red-600' : 'text-gray-700 hover:bg-gray-50'
+                isActive
+                  ? "bg-red-50 text-red-600"
+                  : "text-gray-700 hover:bg-gray-50"
               }`
             }
           >
@@ -27,7 +37,9 @@ function Sidebar() {
           </NavLink>
 
           <div className="pt-4">
-            <p className="px-2 text-xs font-semibold text-gray-400 uppercase">Sense Learn</p>
+            <p className="px-2 text-xs font-semibold text-gray-400 uppercase">
+              Sense Learn
+            </p>
             <div className="mt-2 space-y-1">
               <NavLink
                 to="/how-it-works"
@@ -40,7 +52,9 @@ function Sidebar() {
                 to="/questions"
                 className={({ isActive }) =>
                   `flex items-center gap-2 p-2 rounded-lg ${
-                    isActive ? 'bg-red-50 text-red-600' : 'text-gray-700 hover:bg-gray-50'
+                    isActive
+                      ? "bg-red-50 text-red-600"
+                      : "text-gray-700 hover:bg-gray-50"
                   }`
                 }
               >
@@ -71,13 +85,15 @@ function Sidebar() {
             <p className="text-sm text-gray-500">Free Plan</p>
           </div>
         </div>
-        
+
         <div className="mt-4 space-y-1">
           <NavLink
             to="/profile"
             className={({ isActive }) =>
               `flex items-center gap-2 p-2 rounded-lg ${
-                isActive ? 'bg-red-50 text-red-600' : 'text-gray-700 hover:bg-gray-50'
+                isActive
+                  ? "bg-red-50 text-red-600"
+                  : "text-gray-700 hover:bg-gray-50"
               }`
             }
           >
@@ -91,9 +107,7 @@ function Sidebar() {
             <Settings size={20} />
             <span>Support & FAQ</span>
           </NavLink>
-          <button
-            className="flex items-center gap-2 p-2 text-gray-700 hover:bg-gray-50 rounded-lg w-full"
-          >
+          <button className="flex items-center gap-2 p-2 text-gray-700 hover:bg-gray-50 rounded-lg w-full">
             <LogOut size={20} />
             <span>Log out</span>
           </button>
